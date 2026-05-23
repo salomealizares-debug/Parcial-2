@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const API_URL = "https://team-404-grupo-4-del-integrante-jhamel.onrender.com/api/oficina";
 
-    // ── Elementos del formulario ──────────────────────────────────────────────
+   
     const inputId        = document.getElementById('inputId');
     const inputNombre    = document.getElementById('inputNombre');
     const txtDescripcion = document.getElementById('txtDescripcion');
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cuerpoTabla = document.getElementById('cuerpoTabla');
 
-    // ── Popups ────────────────────────────────────────────────────────────────
+    
     const popup            = document.getElementById('popup');
     const popupMensaje     = document.getElementById('popupMensaje');
     const btnCerrarPopup   = document.getElementById('btnCerrarPopup');
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let idAEliminar = null;
 
-    // ── Mostrar / ocultar popup ───────────────────────────────────────────────
+    
     function mostrarPopup(mensaje) {
         popupMensaje.textContent = mensaje;
         popup.classList.add('activo');
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCerrarEliminar.addEventListener('click',  cerrarPopupEliminar);
     btnCancelarEliminar.addEventListener('click', (e) => { e.preventDefault(); cerrarPopupEliminar(); });
 
-    // ── Limpiar formulario ────────────────────────────────────────────────────
+   
     function limpiarFormulario() {
         inputId.value        = '';
         inputNombre.value    = '';
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnCancelarEdicion.style.display = 'none';
     }
 
-    // ── GET todos → llenar tabla ──────────────────────────────────────────────
+    
     async function cargarTabla() {
         try {
             cuerpoTabla.innerHTML = '<tr><td colspan="5" style="text-align:center;">Cargando...</td></tr>';
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return String(texto).replace(/'/g, "\\'");
     }
 
-    // ── POST: crear nuevo registro ────────────────────────────────────────────
+    
     btnGrabar.addEventListener('click', async () => {
         if (!inputNombre.value.trim()) { alert("El nombre es obligatorio."); return; }
 
@@ -141,14 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ── Cargar datos en formulario para editar (GET /{id}) ────────────────────
+   
     window.editarRegistro = function(id, nombre, descripcion, estado) {
         inputId.value        = id;
         inputNombre.value    = nombre;
         txtDescripcion.value = descripcion;
         inputEstado.value    = estado;
 
-        // Cambiar al modo EDITAR
+        
         btnGrabar.style.display          = 'none';
         btnActualizar.style.display      = 'inline-block';
         btnCancelarEdicion.style.display = 'inline-block';
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnCancelarEdicion.addEventListener('click', limpiarFormulario);
 
-    // ── PUT: actualizar registro ──────────────────────────────────────────────
+    
     btnActualizar.addEventListener('click', async () => {
         const id = inputId.value;
         if (!id) { alert("No hay registro seleccionado."); return; }
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ── DELETE: eliminar registro ─────────────────────────────────────────────
+   
     window.confirmarEliminar = function(id) {
         mostrarPopupEliminar(id);
     };
@@ -228,13 +228,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ── Salir ─────────────────────────────────────────────────────────────────
     btnSalir.addEventListener('click', () => {
         if (confirm("¿Está seguro de que desea salir?")) {
             window.history.back();
         }
     });
 
-    // ── Iniciar ───────────────────────────────────────────────────────────────
     cargarTabla();
 });
