@@ -1,0 +1,182 @@
+body { 
+    font-family: Arial; 
+    background: white; 
+    margin: 0; 
+}
+
+.container { 
+    width: 900px; 
+    margin: 40px auto; 
+    background: #e6eef5; 
+    border: 2px solid #5b7fa6; 
+}
+
+.top-bar { 
+    background: black; 
+    color: white; 
+    padding: 8px; 
+    font-size: 14px; 
+}
+
+header { 
+    background: linear-gradient(#4f81bd, #2e5c8a); 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    font-weight: bold; 
+}
+
+.formulario { 
+    padding: 20px; 
+}
+
+.fila { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+label { 
+    width: 200px; 
+}
+
+input, textarea { 
+    width: 300px; 
+    padding: 6px; 
+    border: 1px solid #555; 
+}
+
+input:disabled {
+    background: #ddd;
+    color: #888;
+    cursor: not-allowed;
+}
+
+textarea { 
+    height: 80px; 
+}
+
+.botones { 
+    margin-top: 20px; 
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn, .salir { 
+    padding: 8px 20px; 
+    background: linear-gradient(#0f4c75, #3282b8); 
+    color: white; 
+    border: none; 
+    text-decoration: none; 
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover, .salir:hover { 
+    background: #1b6ca8; 
+}
+
+/* ── Tabla ── */
+#tablaOficinas {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+#tablaOficinas th {
+    background: linear-gradient(#4f81bd, #2e5c8a);
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+#tablaOficinas td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #c5d5e8;
+    font-size: 13px;
+}
+
+#tablaOficinas tr:nth-child(even) td {
+    background: #f0f5fb;
+}
+
+#tablaOficinas tr:hover td {
+    background: #d6e4f0;
+}
+
+.btn-editar {
+    padding: 4px 12px;
+    background: linear-gradient(#b87d0f, #e6a817);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.btn-eliminar {
+    padding: 4px 12px;
+    background: linear-gradient(#8b0000, #c0392b);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-editar:hover { background: #c8870f; }
+.btn-eliminar:hover { background: #a93226; }
+
+/* ── Popup ── */
+.popup { 
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    background: rgba(0,0,0,0.4); 
+    display: none; 
+}
+
+.popup:target { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.activo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ventana { 
+    background: white; 
+    width: 350px; 
+    border: 2px solid black; 
+    text-align: center; 
+    padding-bottom: 20px; 
+}
+
+.barra { 
+    background: black; 
+    color: white; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+.cerrar { 
+    float: right; 
+    cursor: pointer; 
+}
+
+.aceptar { 
+    display: inline-block; 
+    margin-top: 15px; 
+    padding: 8px 20px; 
+    border: 2px solid green; 
+    text-decoration: none; 
+    color: black;
+    cursor: pointer;
+}

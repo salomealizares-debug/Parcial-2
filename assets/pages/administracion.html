@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Administracion Unidad Administrativa</title>
+<link rel="stylesheet" href="../css/style4.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <div class="titulo">ADMINISTRACIÓN UNIDAD ADMINISTRATIVA</div>
+
+    <div class="mensaje cargando" id="mensaje">Cargando datos...</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>DESCRIPCIÓN</th>
+                <th>ESTADO</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <div class="botones">
+        <button onclick="abrirModalNuevo()">Nuevo</button>
+        <button onclick="abrirModalEditar()" id="btnEditar" disabled>Editar</button>
+        <button onclick="eliminar()" id="btnEliminar" disabled>Eliminar</button>
+        <button onclick="deseleccionar()">Limpiar selección</button>
+        <button onclick="cargarDatos()">Actualizar</button>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+    <div class="modal">
+        <div class="modal-titulo" id="modalTitulo">NUEVA OFICINA</div>
+        <div class="modal-cuerpo">
+            <label>Nombre</label>
+            <input type="text" id="fNombre" placeholder="Nombre de la oficina">
+            <label>Descripción</label>
+            <input type="text" id="fDescripcion" placeholder="Descripción">
+            <label>Estado</label>
+            <select id="fEstado">
+                <option value="ACTIVO">ACTIVO</option>
+                <option value="INACTIVO">INACTIVO</option>
+            </select>
+        </div>
+        <div class="modal-botones">
+            <button onclick="cerrarModal()" style="background:#888">Cancelar</button>
+            <button onclick="guardar()">Guardar</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/administracion.js"></script>
+</body>
+</html>

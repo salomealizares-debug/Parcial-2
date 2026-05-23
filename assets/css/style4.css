@@ -1,0 +1,120 @@
+body { 
+    font-family: Arial; 
+    background: white; 
+    margin: 0; 
+}
+.contenedor { 
+    width: 850px; 
+    margin: 20px auto; 
+    background: #e6eef5; 
+    border: 2px solid #5b7fa6; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.titulo { 
+    background: linear-gradient(#4f81bd, #2e5c8a); 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    font-weight: bold; 
+    font-size: 16px;
+}
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border: 2px solid #5b7fa6;
+}
+th {
+    background: linear-gradient(#4f81bd, #2e5c8a);
+    color: white;
+    padding: 10px;
+    border: 1px solid #5b7fa6;
+    font-size: 14px;
+}
+td {
+    padding: 8px;
+    border: 1px solid #999;
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+}
+tr:nth-child(even) td { background: #f4f8fc; }
+tr:hover td { background: #d0e4f5; }
+tr.seleccionado td { background: #b8d4ed !important; font-weight: bold; }
+
+.botones {
+    text-align: center;
+    padding-bottom: 15px;
+}
+button {
+    background: #5b7fa6;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+}
+button:hover { background: #2e5c8a; }
+button:disabled { background: #aaa; cursor: not-allowed; }
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.activo { display: flex; }
+.modal {
+    background: #e6eef5;
+    border: 2px solid #5b7fa6;
+    border-radius: 6px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.modal-titulo {
+    background: linear-gradient(#4f81bd, #2e5c8a);
+    color: white;
+    padding: 12px 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.modal-cuerpo {
+    padding: 20px;
+}
+.modal-cuerpo label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #2e5c8a;
+}
+.modal-cuerpo input, .modal-cuerpo select {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 12px;
+    border: 1px solid #5b7fa6;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+.modal-botones {
+    text-align: right;
+    padding: 10px 20px 15px;
+}
+
+.mensaje {
+    text-align: center;
+    padding: 6px;
+    font-size: 13px;
+    min-height: 24px;
+}
+.mensaje.ok       { color: #2a7a2a; }
+.mensaje.err      { color: #cc0000; }
+.mensaje.cargando { color: #555; }
