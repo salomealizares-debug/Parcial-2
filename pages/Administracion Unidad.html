@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración Unidad Administrativa</title>
+    <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1 class="titulo">S.I.A.F</h1>
+        <p class="subtitulo">Sistema de Activos Fijos</p>
+    </div>
+
+    <div class="info">
+        <p><b>Entidad:</b> 0025</p>
+        <label>Ministerio de la Presidencia</label>
+        <p><b>Unidad:</b> 0</p>
+    </div>
+
+    <div class="subheader">ADMINISTRACION UNIDAD ADMINISTRATIVA</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            <tr><td colspan="4" style="text-align:center;">Cargando...</td></tr>
+        </tbody>
+    </table>
+
+    <div class="botones">
+        <button id="btnNuevo">Nuevo</button>
+        <button id="btnEditar">Editar</button>
+        <button id="btnEliminar">Eliminar</button>
+        <button id="btnSalir">Salir</button>
+    </div>
+</div>
+
+
+<div id="modalForm" class="modal">
+    <div class="modal-ventana">
+        <div class="modal-barra">
+            <span id="modalTitulo">NUEVA OFICINA</span>
+            <span class="modal-cerrar" id="btnCerrarModal">✕</span>
+        </div>
+        <div class="modal-cuerpo">
+            <input type="hidden" id="inputId">
+
+            <div class="modal-fila">
+                <label>Nombre:</label>
+                <input type="text" id="inputNombre" placeholder="Ej: Oficina Administrativa">
+            </div>
+            <div class="modal-fila">
+                <label>Descripción:</label>
+                <textarea id="txtDescripcion" placeholder="Ej: Área principal"></textarea>
+            </div>
+            <div class="modal-fila">
+                <label>Estado:</label>
+                <input type="text" id="inputEstado" placeholder="Ej: Activo">
+            </div>
+
+            <div class="modal-botones">
+                <button id="btnGuardar">Guardar</button>
+                <button id="btnCancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalEliminar" class="modal">
+    <div class="modal-ventana" style="width:350px;">
+        <div class="modal-barra">
+            <span>CONFIRMAR ELIMINACIÓN</span>
+            <span class="modal-cerrar" id="btnCerrarEliminar">✕</span>
+        </div>
+        <div class="modal-cuerpo" style="text-align:center; padding:20px;">
+            <p>¿Está seguro de que desea eliminar el registro seleccionado?</p>
+            <div class="modal-botones">
+                <button id="btnConfirmarEliminar" style="background:linear-gradient(#8b0000,#c0392b);">Sí, eliminar</button>
+                <button id="btnCancelarEliminar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalExito" class="modal">
+    <div class="modal-ventana" style="width:320px;">
+        <div class="modal-barra">
+            <span>WSIAF</span>
+            <span class="modal-cerrar" id="btnCerrarExito">✕</span>
+        </div>
+        <div class="modal-cuerpo" style="text-align:center; padding:20px;">
+            <p id="mensajeExito">Operación realizada correctamente.</p>
+            <button id="btnAceptarExito">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/administracion.js"></script>
+</body>
+</html>
