@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Grupos Contables</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="top-bar">
+            GRUPOS CONTABLES
+        </div>
+
+        <div class="sub-bar">
+            UNIDAD: 0252 &nbsp;&nbsp;&nbsp;&nbsp; Nivel Central
+        </div>
+
+        <header>
+            GRUPO CONTABLE
+        </header>
+
+        <div class="formulario">
+
+            <div class="seccion-superior">
+
+                <div class="col-izq">
+                    <div class="fila">
+                        <label>Grupo</label>
+                        <input type="text" class="input-corto">
+                    </div>
+                    <div class="fila">
+                        <label>Vida Útil</label>
+                        <input type="text" class="input-corto">
+                    </div>
+                </div>
+
+                <div class="col-der">
+                    <div class="fila">
+                        <label>Nombre</label>
+                        <select class="input-largo">
+                            <option>MUEBLES Y ENSERES DE OFICINA</option>
+                        </select>
+                    </div>
+                    <div class="fila">
+                        <label>Observaciones</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="fila-check">
+                <label>Deprecia</label>
+                <input type="checkbox" checked>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">CODIGO</th>
+                            <th style="width: 80%;">NOMBRE AUXILIAR</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="tabla-scroll">
+                    <table>
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="botones">
+                <button class="btn">Nuevo</button>
+                <button class="btn">Modificar</button>
+                <button class="btn disabled" disabled>Guardar</button>
+                <button class="btn">Eliminar</button>
+                <button class="btn disabled" disabled>Deshacer</button>
+                <a href="#" class="salir">Salir</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/grupo-contable.js"></script>
+
+</body>
+</html>
