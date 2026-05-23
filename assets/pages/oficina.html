@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OFICINA</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+
+<div class="ventana">
+
+    <div class="titulo">
+        <div class="unidad">
+            <span>UNIDAD: 0252</span><br>
+            <small>Nivel Central</small>
+        </div>
+        <h1>OFICINA</h1>
+    </div>
+
+    <div class="cuerpo">
+
+        <!-- Formulario izquierda -->
+        <div class="formulario">
+            <div class="fila">
+                <label>Oficina</label>
+                <div class="oficina-box">
+                    <input type="text" placeholder="ID">
+                    <select></select>
+                    <div class="estado">-</div>
+                </div>
+            </div>
+
+            <div class="fila">
+                <label>Descripción</label>
+                <div class="textarea-wrapper">
+                    <textarea></textarea>
+                    <div class="textarea-buttons">
+                        <button type="button">▲</button>
+                        <button type="button">▼</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones derecha -->
+        <div class="menu-derecha">
+            <button>Activar</button>
+            <button>Inactivar</button>
+        </div>
+
+    </div>
+
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <button class="btn-desactivado">Activo</button>
+        <button class="btn-desactivado">Inactivo</button>
+        <button>Nuevo</button>
+        <button>Modificar</button>
+        <button class="guardar">Guardar</button>
+        <button>Deshacer</button>
+        <button>Salir</button>
+    </div>
+
+</div>
+
+<script src="../js/oficina.js"></script>
+</body>
+</html>
