@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Administración de Recursos</title>
+  <link rel="stylesheet" href="../css/style_3.css">
+</head>
+<body>
+ 
+<div class="ventana">
+ 
+  <div class="barra-superior">ADMINISTRACION DE RECURSOS</div>
+  <div class="barra-titulo">ADMINISTRACION DE RECURSOS</div>
+ 
+  <div class="contenido">
+ 
+    <!-- IZQUIERDA -->
+    <div class="izquierda">
+ 
+      <h4>CIERRE DE GESTION</h4>
+ 
+      <button class="btn" id="btn-cerrar">Cerrar Gestión</button>
+      <button class="btn" id="btn-cambiar">Cambiar Gestión</button>
+ 
+      <div class="menu">
+        <button class="btn" id="btn-ie">Importar/Exportar</button>
+        <button class="btn" id="btn-ufv">Índices UFV</button>
+        <button class="btn" id="btn-seg">Seguridad</button>
+        <button class="btn" id="btn-reindex">Re-indexar</button>
+        <a href="#popup" class="btn activo" id="btn-migrador">Migrador</a>
+      </div>
+ 
+    </div>
+ 
+    <!-- DERECHA -->
+    <div class="derecha">
+ 
+      <input type="text" id="input-gestion" value="2013" class="input" />
+ 
+      <div class="caja" id="caja"></div>
+ 
+      <button class="salir" id="btn-salir">Salir</button>
+ 
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- POPUP MIGRADOR -->
+<div id="popup" class="popup">
+  <div class="ventana-popup">
+ 
+    <div class="barra-popup">
+      Microsoft Visual FoxPro
+      <a href="#" class="cerrar">X</a>
+    </div>
+ 
+    <div class="contenido-popup">
+      <p>¿Es usted el único usuario del sistema?</p>
+      <a href="#" class="si" id="popup-si">Sí</a>
+      <a href="#" class="no" id="popup-no">No</a>
+    </div>
+ 
+  </div>
+</div>
+ 
+<script src="../js/script_3.js"></script>
+</body>
+</html>
+ 
