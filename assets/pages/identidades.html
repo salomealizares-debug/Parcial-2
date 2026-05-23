@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Combinados</title>
+    <link rel="stylesheet" href="../css/style7.css">
+</head>
+<body>
+
+<div class="window-container">
+    <div class="window-header">Entidades</div>
+
+    <div class="main-header">INSTALACION ENTIDAD</div>
+
+    <div class="form-box">
+
+        <div class="form-group">
+            <label>ID:</label>
+            <input type="number" id="entidadId" placeholder="Ingrese ID">
+        </div>
+
+        <div class="form-group">
+            <label>Gestión:</label>
+            <input type="number" id="gestion" placeholder="Ej: 2024">
+        </div>
+
+        <div class="form-group">
+            <label>Entidad:</label>
+            <select id="codigoOrganismo">
+                <option value="6">0006 Vicepresidencia del Estado Plurinacional</option>
+                <option value="10">0010 Ministerio de Relaciones Exteriores</option>
+                <option value="15">0015 Ministerio de Gobierno</option>
+                <option value="16">0016 Ministerio de Educación</option>
+                <option value="20">0020 Ministerio de Defensa</option>
+                <option value="25">0025 Ministerio de la Presidencia</option>
+                <option value="30">0030 Ministerio de Justicia</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Sigla:</label>
+            <input type="text" id="sigla" placeholder="Ej: MIN-EDU">
+        </div>
+
+        <div class="form-group">
+            <label>Institución:</label>
+            <input type="text" id="institucion" placeholder="Descripción de la entidad">
+        </div>
+
+        <div class="mensaje" id="mensaje"></div>
+
+        <div class="buttons">
+            <button class="btn"           onclick="postOrganismo()">OK (Guardar)</button>
+            <button class="btn secondary" onclick="getOrganismoPorId()">Buscar ID</button>
+            <button class="btn secondary" onclick="putOrganismo()">Actualizar</button>
+            <button class="btn danger"    onclick="deleteOrganismo()">Eliminar</button>
+            <button class="btn secondary" onclick="limpiarFormulario()">Salir</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/identidades.js"></script>
+
+</body>
+</html>
