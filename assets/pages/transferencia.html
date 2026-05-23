@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transferencia</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="ventana">
+
+    <div class="barra-superior">TRANSFERENCIA</div>
+    <div class="titulo">TRANSFERENCIA</div>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <div class="contenido">
+
+        <!-- BUSCAR POR ID -->
+        <div class="seccion">Buscar Usuario</div>
+
+        <div class="fila-buscar">
+            <label>ID Usuario</label>
+            <input type="number" id="usuarioIdInput" placeholder="Ingrese el ID del usuario..." min="1">
+            <button onclick="cargarUsuario()">Buscar</button>
+        </div>
+
+        <!-- DATOS ACTUALES -->
+        <div class="seccion">Datos Actuales</div>
+
+        <div class="fila">
+            <label>Nombre Actual</label>
+            <input type="text" id="nombreActual" readonly>
+        </div>
+
+        <div class="fila">
+            <label>Correo Actual</label>
+            <input type="text" id="correoActual" readonly>
+        </div>
+
+        <!-- NUEVOS DATOS -->
+        <div class="seccion">Nuevos Datos</div>
+
+        <div class="fila">
+            <label>Nuevo Responsable</label>
+            <select id="nuevoResponsable">
+                <option value="">-- Seleccione un usuario --</option>
+            </select>
+        </div>
+
+        <div class="fila">
+            <label>Nuevo Nombre</label>
+            <input type="text" id="nuevoNombre" placeholder="Escriba el nuevo nombre...">
+        </div>
+
+        <div class="fila">
+            <label>Nuevo Correo</label>
+            <input type="email" id="nuevoCorreo" placeholder="Escriba el nuevo correo...">
+        </div>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="botones">
+        <button class="btn-crear"    onclick="crearUsuario()">C̲rear</button>
+        <button class="btn-eliminar" onclick="eliminarUsuario()">E̲liminar</button>
+        <button onclick="cancelar()">C̲ancelar</button>
+        <button onclick="actualizarUsuario()">A̲ceptar</button>
+    </div>
+
+    <!-- TABLA DE USUARIOS -->
+    <div class="tabla-seccion">
+        <div class="tabla-titulo">Lista de Usuarios</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                <tr><td colspan="3" class="tabla-vacia">Cargando usuarios...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../js/transferencia.js"></script>
+
+</body>
+</html>
